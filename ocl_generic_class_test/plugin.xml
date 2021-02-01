@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ocl_generic_class_test -->
+      <package
+            uri="http://www.example.org/ocl_generic_class_test"
+            class="ocl_generic_class_test.Ocl_generic_class_testPackage"
+            genModel="model/ocl_generic_class_test.genmodel"/>
+   </extension>
+
+</plugin>

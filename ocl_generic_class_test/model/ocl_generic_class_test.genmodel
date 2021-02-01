@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/ocl_generic_class_test/src-gen" creationIcons="false"
+    editDirectory="/ocl_generic_class_test.edit/src-gen" editorDirectory="/ocl_generic_class_test.editor/src-gen"
+    modelPluginID="ocl_generic_class_test" modelName="Ocl_generic_class_test" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
+    <details key="Use Delegates" value="false"/>
+  </genAnnotations>
+  <foreignModel>ocl_generic_class_test.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Ocl_generic_class_test" disposableProviderFactory="true" ecorePackage="ocl_generic_class_test.ecore#/">
+    <genClasses ecoreClass="ocl_generic_class_test.ecore#//TestModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ocl_generic_class_test.ecore#//TestModel/classes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ocl_generic_class_test.ecore#//TestModel/generics"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ocl_generic_class_test.ecore#//TestModel/genericsA"/>
+    </genClasses>
+    <genClasses ecoreClass="ocl_generic_class_test.ecore#//BaseClass"/>
+    <genClasses ecoreClass="ocl_generic_class_test.ecore#//ClassA"/>
+    <genClasses ecoreClass="ocl_generic_class_test.ecore#//ClassB"/>
+    <genClasses image="false" ecoreClass="ocl_generic_class_test.ecore#//BaseGeneric">
+      <genTypeParameters ecoreTypeParameter="ocl_generic_class_test.ecore#//BaseGeneric/T"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ocl_generic_class_test.ecore#//BaseGeneric/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="ocl_generic_class_test.ecore#//GenericA"/>
+  </genPackages>
+</genmodel:GenModel>

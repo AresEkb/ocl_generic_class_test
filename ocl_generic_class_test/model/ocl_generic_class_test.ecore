@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ocl_generic_class_test" nsURI="http://www.example.org/ocl_generic_class_test"
+    nsPrefix="ocl_generic_class_test">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="TestModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classes" upperBound="-1"
+        eType="#//BaseClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generics" upperBound="-1"
+        containment="true">
+      <eGenericType eClassifier="#//BaseGeneric">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genericsA" upperBound="-1"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.generics"/>
+      </eAnnotations>
+      <eGenericType eClassifier="#//BaseGeneric">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseClass" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassA" eSuperTypes="#//BaseClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassB" eSuperTypes="#//BaseClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseGeneric" abstract="true">
+    <eTypeParameters name="T"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref">
+      <eGenericType eTypeParameter="#//BaseGeneric/T"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericA">
+    <eGenericSuperTypes eClassifier="#//BaseGeneric">
+      <eTypeArguments eClassifier="#//ClassA"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+</ecore:EPackage>
